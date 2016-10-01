@@ -1,4 +1,3 @@
-set background=dark
-"colorscheme desert
+colorscheme desert
 "set t_Co=256
 "autocmd BufRead *  20vsp  ./
