@@ -1,2 +1,3 @@
-colorscheme ir_black
-set t_Co=256
+colorscheme desert
+"set t_Co=256
+"autocmd BufRead *  20vsp  ./
