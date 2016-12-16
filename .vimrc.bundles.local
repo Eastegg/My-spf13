@@ -1,5 +1,4 @@
 Bundle 'winmanager'
-Bundle 'majutsushi/tagbar'
 Bundle 'taglist.vim'
 Bundle 'SuperTab'
 
