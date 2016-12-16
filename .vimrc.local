@@ -1,8 +1,8 @@
 colorscheme desert
 "set t_Co=256
 set wrap
-
-
+"let Tlist_Ctags_Cmd = 'C:\Users\yuntengFE\.spf13-vim-3\ctags58\ctags.exe'
+"在配置目录的ctags，不生效。直接把ctages.exe放入vim安装目录解决
 
 "自动开关 NERDTree 可被下方方案取代
 
