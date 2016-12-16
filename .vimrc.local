@@ -1,3 +1,52 @@
 colorscheme desert
 "set t_Co=256
-"autocmd BufRead *  20vsp  ./
+set wrap
+
+
+
+"自动开关 NERDTree 可被下方方案取代
+
+"autocmd vimenter * NERDTree|TlistToggle    "打开NERDTree
+autocmd vimenter * NERDTree    "打开NERDTree
+wincmd w
+"autocmd vimenter * Tagerbar    "打开Tagerbar
+"wincmd w
+autocmd VimEnter * wincmd w    "光标默认在主窗口
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif    "vim 退出时直接关闭NERDTree
+
+
+
+"下面的代码放到自己的vimrc配置中即可
+"
+"let g:winManagerWindowLayout='NERDTree|Tagbar'
+"let g:winManagerWidth=30
+"let g:AutoOpenWinManager = 1 "这里要配合修改winmanager.vim文件，见下方说明
+"
+"let g:NERDTree_title = "[NERDTree]"
+"function! NERDTree_Start()
+"    exe 'q' "执行一个退出命令，关闭自动出现的窗口
+"    exe 'NERDTree'
+"endfunction
+"
+"function! NERDTree_IsValid()
+"	return 1
+"endfunction
+"
+"noremap <f5> :NERDTreeFind<cr>
+"
+"let g:Tagbar_title = "[Tagbar]"
+"function! Tagbar_Start()
+"    exe 'q' "执行一个退出命令，关闭自动出现的窗口
+"    exe 'TagbarOpen'
+"endfunction
+"
+"function! Tagbar_IsValid()
+"    return 1
+"endfunction
+"let g:tagbar_vertical = 30
+"
+"
+"一下内容需要加入到 winmanager/plugins/winmanager.vim 文件顶部
+"if g:AutoOpenWinManager
+"autocmd VimEnter * nested call s:ToggleWindowsManager()|1wincmd w "vim进入时自动执行 ToggleWindowsManager ，然后移动一次窗口焦点
+"endif

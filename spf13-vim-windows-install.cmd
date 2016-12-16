@@ -38,6 +38,7 @@ call mklink "%HOME%\.vimrc.before.fork" "%APP_PATH%\.vimrc.before.fork"
 call mklink /J "%HOME%\.vim" "%APP_PATH%\.vim"
 call mklink "%HOME%\.vimrc.local" "%APP_PATH%\.vimrc.local"
 call mklink "%HOME%\.gvimrc.local" "%APP_PATH%\.gvimrc.local"
+call mklink "%HOME%\.vimrc.bundles.local" "%APP_PATH%\.vimrc.bundles.local"
 
 
 IF NOT EXIST "%APP_PATH%\.vim\bundle" (
